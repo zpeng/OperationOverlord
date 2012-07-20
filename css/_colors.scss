@@ -1,0 +1,97 @@
+
+$trans: transparent;
+
+$black: #000000;
+$white: #ffffff;
+
+$red1: #ff0000;
+$red2: #cc0000;
+$red3: #990000;
+$red4: #660000;
+$red5: #330000;
+$red6: #fee0e0;
+$red7: #ff3737;
+
+$gray1:  #191919; $grey1:  $gray1;
+$gray2:  #323232; $grey2:  $gray2;
+$gray3:  #4b4b4b; $grey3:  $gray3;
+$gray4:  #646464; $grey4:  $gray4;
+$gray5:  #7d7d7d; $grey5:  $gray5;
+$gray6:  #969696; $grey6:  $gray6;
+$gray7:  #afafaf; $grey7:  $gray7;
+$gray8:  #c8c8c8; $grey8:  $gray8;
+$gray9:  #e1e1e1; $grey9:  $gray9;
+$gray10: #f0f0f0; $grey10: $gray10;
+$gray11: #232323; $grey11: $gray11;
+$gray12: #3C3C3C; $grey12: $gray12;
+
+
+
+$orange1: #ff9900;
+$orange2: #b96f00;
+$orange3: #fc8c1d;
+
+$yellow1: #ffff00;
+$yellow2: #ffcc00;
+$yellow3: #cc9900;
+$yellow4: #996600;
+$yellow5: #333300;
+$yellow6: #ffff99;
+$yellow7: #fffbc6;
+
+$green1: #00ff00;
+$green2: #99cc33;
+$green3: #339900;
+$green4: #336600;
+$green5: #003300;
+$green6: #99ff66;
+
+$blue1:  #00aeef;
+$blue2:  #3399ff;
+$blue3:  #0066cc;
+$blue4:  #003366;
+$blue5:  #285666;
+$blue6:  #b1dbea;
+$blue7:  #eff8fb;
+$blue8:  #85c6de;
+$blue9:  #d7ecf4;
+$blue10: #e8f4f9;
+$blue11: #6fb7ff;
+$blue12: #001520;
+$blue13: #355373;
+
+$purple1: #ff00ff;
+$purple2: #993366;
+$purple3: #6666ff;
+
+$brown1: #996633;
+
+$tickerBar: #373737;
+
+$grayGradient1:  gradient($gray2, $black);  $greyGradient1:  $grayGradient1;
+$grayGradient2:  gradient($gray2, $gray1);  $greyGradient2:  $grayGradient2;
+$grayGradient3:  gradient($gray2, $gray11); $greyGradient3:  $grayGradient3;
+$grayGradient4:  gradient($gray3, $gray2);  $greyGradient4:  $grayGradient4;
+$grayGradient5:  gradient($gray3, $gray12); $greyGradient5:  $grayGradient5;
+$grayGradient6:  gradient($gray4, $gray3);  $greyGradient6:  $grayGradient6;
+$grayGradient7:  gradient($gray6, $gray5);  $greyGradient7:  $grayGradient7;
+$grayGradient8:  gradient($gray9, $gray8);  $greyGradient8:  $grayGradient8;
+$grayGradient9:  gradient($gray10, $gray9); $greyGradient9:  $grayGradient9;
+$grayGradient10: gradient($white, $gray9);  $greyGradient10: $grayGradient10;
+$grayGradient11: gradient($white, $gray10); $greyGradient11: $grayGradient11;
+$grayGradient12: gradient($gray12, $gray2); $greyGradient12: $grayGradient12;
+
+$grayGradientLR10: horizontalGradient($white, $grey9); $greyGradientLR10: $grayGradientLR10;
+
+$blueGradient1: gradient($blue1, $blue13);
+$blueGradient2: gradient($blue3, $blue13);
+$blueGradient3: gradient($blue11, $blue6);
+$blueGradient4: gradient($white, $blue6);
+$blueGradient5: gradient($white, $blue7);
+
+$yellowGradient1: gradient($yellow1, $yellow2);
+$yellowGradient2: gradient($yellow6, $yellow2);
+$yellowGradient3: gradient($yellow7, $yellow6);
+
+$redGradient1: gradient($red7, $red1);
+$redGradient1_inv: gradient($red1, $red7);

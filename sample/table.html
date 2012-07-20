@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Sortable Table</title>
+
+    <link rel="stylesheet" href="../css/_colors.scss"/>
+    <link rel="stylesheet" href="../css/widgets/SortableTable.css"/>
+
+    <script type="text/javascript" src="../js/mootools/mootools-core-1.4.5-full-nocompat.js"></script>
+    <script type="text/javascript" src="../js/mootools/mootools-more-1.4.0.1.js"></script>
+    <script type="text/javascript" src="../js/widgets/SortableTable.js"></script>
+    <script type="text/javascript" src="table_json.js"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function () {
+            var myTable = new SortableTable({
+                        tableId:'myTable',
+                        tableClass:'SortableTable',
+                        targetId:'table_container',
+                        overCls:'over'
+                    },
+                    TABLE_JSON
+            );
+        });
+    </script>
+</head>
+<body>
+
+<div id="container">
+    <div id="table_container">
+
+    </div>
+</div>
+
+</body>
+</html>

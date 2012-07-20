@@ -1,0 +1,166 @@
+@import "colors";
+
+#table_container {
+    border: 1px solid $gray7;
+    padding: 10px;
+    width: 800px;
+    overflow: hidden;
+}
+
+table.SortableTable {
+    border-top: 1px solid $gray7;
+    border-left: 1px solid $gray7;
+    border-bottom: 1px solid $gray7;
+    width: 100%;
+    font-size: 14px;
+
+    /*** Table Header ***/
+    th {
+        border-right: 1px solid $gray7;
+        background: url(../../images/widgets/sortable-table-sort.png) no-repeat 10px 8px $blue3;
+        padding: 5px 5px 5px 25px;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: left;
+
+        &.sortedASC {
+            background: url(../../images/widgets/sortable-table-asc.png) no-repeat 10px 4px $blue3;
+        }
+
+        &.sortedDESC {
+            background: url(../../images/widgets/sortable-table-desc.png) no-repeat 10px 9px $blue3;
+        }
+
+        &.tableHeaderOver {
+            cursor: pointer;
+            color: $white;
+        }
+    }
+
+    /*** Table Body ***/
+    tbody {
+        tr {
+            border-top: 1px solid $gray7;
+            background-color: $white;
+
+            &.even{
+                background: $blue9;
+            }
+
+            &.hide {
+                display: none;
+            }
+
+            td {
+                border-right: 1px solid $gray7;
+                padding: 4px 4px 4px 10px;
+            }
+
+        }
+
+        tr:hover {
+            background-color: $blue8;
+            cursor: pointer;
+        }
+    }
+
+
+    /*** Table Footer ***/
+    tfoot{
+        tr {
+            background-color: $blue3;
+
+            td {
+                border-right: 1px solid $gray7;
+                text-align: left;
+                padding: 4px 4px 4px 25px;
+                font-weight: bold;
+                color: $white;
+            }
+        }
+    }
+}
+
+.topToolbar {
+    margin-bottom: 10px;
+
+    input {
+        border: 1px solid $gray7;
+    }
+
+     select {
+        border: 1px solid $gray7;
+        margin-right: 5px;
+    }
+}
+
+.bottomToolbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+     #pageNav {
+        margin-left: 0px;
+        float: left;
+
+        div.page_first {
+            float: left;
+            background: url(../../images/widgets/sortable-table-first.gif) no-repeat;
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        div.page_first:hover {
+            cursor: pointer;
+        }
+
+        div.page_previous {
+            float: left;
+            background: url(../../images/widgets/sortable-table-previous.gif) no-repeat;
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        div.page_previous:hover {
+            cursor: pointer;
+        }
+
+        div.page_next {
+            float: left;
+            background: url(../../images/widgets/sortable-table-next.gif) no-repeat;
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        div.page_next:hover {
+            cursor: pointer;
+        }
+
+        div.page_last {
+            float: left;
+            background: url(../../images/widgets/sortable-table-last.gif) no-repeat;
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        div.page_last:hover {
+            cursor: pointer;
+        }
+    }
+
+    #pageIndex {
+        margin-left: 150px;
+        float: left;
+    }
+
+    #pageSizeSelector {
+        float: right;
+
+        select {
+            margin-right: 5px;
+        }
+    }
+}

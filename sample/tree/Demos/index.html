@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tree for MooTools</title>
+	<link rel="stylesheet" media="all" type="text/css" href="style.css" />
+
+	<style type="text/css">
+	body > div.content {
+		min-height: 900px;
+	}
+
+	h1 {
+		margin: 20px 0;
+		font-size: 2em;
+	}
+	</style>
+
+	<link rel="stylesheet" media="all" type="text/css" href="../Css/Tree.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="../Css/Collapse.css" />
+
+	<script type="text/javascript" src="../../../js/mootools/mootools-core-1.4.5-full-compat.js"></script>
+	<script type="text/javascript" src="../../../js/mootools/mootools-more-1.4.0.1.js"></script>
+	<script type="text/javascript" src="../../../js/mootools/mootools-class-extras.js"></script>
+	
+	<script type="text/javascript" src="../Source/Tree.js"></script>
+	<script type="text/javascript" src="../Source/Collapse.js"></script>
+	<script type="text/javascript" src="../Source/Collapse.Cookie.js"></script>
+	
+	<script type="text/javascript">
+		window.addEvent('domready', function(){
+			// Example #1
+			new Tree('tree', {
+				
+				checkDrag: function(element){
+					return !element.hasClass('nodrag');
+				},
+
+				checkDrop: function(element){
+					return !element.hasClass('nodrop');
+				}
+				
+			});
+
+			var dispose = new Element('span.dispose[text=(remove)]').addEvents({
+
+				mousedown: function(event){
+					event.preventDefault();
+				},
+
+				click: function(){
+					this.getParent('li').dispose();
+				}
+
+			});
+
+			document.id('tree').addEvents({
+
+				'mouseover:relay(li)': function(){
+					this.getElement('span').adopt(dispose);
+				},
+
+				mouseleave: function(){
+					dispose.dispose();
+				}
+				
+			});
+
+			var i = 1;
+			document.id('addItem').addEvent('click', function(){
+				new Element('li').adopt(new Element('span[text=New Item #' + (i++) + ']')).inject('tree');
+			});
+
+			// Example #2
+			new Collapse.Cookie('collapse');
+
+			// Example #3
+			new Tree('both');
+			new Collapse('both');
+		});
+	</script>
+</head>
+<body>
+<div class="content">
+	<h1>Draggable Tree Example</h1>
+	<ul class="tree" id="tree">
+		<li><span>Test 1</span></li>
+		<li><span>Test 2</span></li>
+		<li><span>Test 3</span>
+			<ul>
+				<li><span>Test 3.1</span>
+					<ul>
+						<li><span>Test 3.1.1</span></li>
+						<li><span>Test 3.1.2</span></li>
+					</ul>
+				</li>
+				<li><span>Test 3.2</span></li>
+				<li><span>Test 3.3</span></li>
+				<li><span>Test 3.4</span></li>
+			</ul>
+		</li>
+		<li class="nodrop"><span>Test 4 (You can't drop on me!)</span></li>
+		<li class="nodrag"><span>Test 5 (You can't drag me!)</span></li>
+	</ul>
+	
+	<a id="addItem" class="go bold" href="#">Add a new item</a>
+
+	<h1>Collapse/Expand + store state in a Cookie</h1>
+	<ul class="collapse" id="collapse">
+		<li id="collapse1"><a class="expand" href="#"></a><span>Test 1</span></li>
+		<li id="collapse2"><a class="expand" href="#"></a><span>Test 2</span></li>
+		<li id="collapse3"><a class="expand" href="#"></a><span>Test 3</span>
+			<ul>
+				<li id="collapse4"><a class="expand" href="#"></a><span>Test 3.1</span>
+					<ul>
+						<li id="collapse5"><a class="expand" href="#"></a><span>Test 3.1.1</span></li>
+						<li id="collapse6"><a class="expand" href="#"></a><span>Test 3.1.2</span></li>
+					</ul>
+				</li>
+				<li id="collapse7"><a class="expand" href="#"></a><span>Test 3.2</span></li>
+				<li id="collapse8"><a class="expand" href="#"></a><span>Test 3.3</span></li>
+				<li id="collapse9"><a class="expand" href="#"></a><span>Test 3.4</span></li>
+			</ul>
+		</li>
+	</ul>
+
+	<h1>Draggable Tree + Collapse/Expand</h1>
+	<ul class="collapse tree" id="both">
+		<li><a class="expand" href="#"></a><span>Test 1</span></li>
+		<li><a class="expand" href="#"></a><span>Test 2</span></li>
+		<li><a class="expand" href="#"></a><span>Test 3</span>
+			<ul>
+				<li><a class="expand" href="#"></a><span>Test 3.1</span>
+					<ul>
+						<li><a class="expand" href="#"></a><span>Test 3.1.1</span></li>
+						<li><a class="expand" href="#"></a><span>Test 3.1.2</span></li>
+					</ul>
+				</li>
+				<li><a class="expand" href="#"></a><span>Test 3.2</span></li>
+				<li><a class="expand" href="#"></a><span>Test 3.3</span></li>
+				<li><a class="expand" href="#"></a><span>Test 3.4</span></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
