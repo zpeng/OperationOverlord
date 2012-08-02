@@ -48,12 +48,33 @@ $code_base = array(
         'fullpath' => '../js/mootools/mootools-class-extras.js'
     ),
 
+
+    //bootstrap
+    'bootstrap-responsive_css' => array(
+        'name' => 'colors_css',
+        'type' => 'css',
+        'fullpath' => '../bootstrap/css/bootstrap-responsive.min.css',
+    ),
+    'bootstrap_css' => array(
+        'name' => 'colors_css',
+        'type' => 'css',
+        'fullpath' => '../bootstrap/css/bootstrap.min.css',
+    ),
+    'bootstrap' => array(
+        'name' => 'mootools_more_1_4_0_1',
+        'type' => 'js',
+        'fullpath' => '../bootstrap/js/bootstrap.min.js',
+        'requires' => array('bootstrap-responsive_css', 'bootstrap_css')
+    ),
+
+
+
     // Widgets
     'table_sortable' => array(
         'name' => 'table_sortable',
         'type' => 'js',
         'fullpath' => '../js/widgets/SortableTable.js',
-        'requires' => array('mootools_core_1_4_5', 'mootools_more_1_4_0_1', 'SortableTable_css')
+        'requires' => array('mootools_core_1_4_5', 'mootools_more_1_4_0_1', 'SortableTable_css', 'bootstrap_css')
     ),
     'selector' => array(
         'name' => 'selector',

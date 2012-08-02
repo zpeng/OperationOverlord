@@ -8,15 +8,10 @@
 }
 
 table.SortableTable {
-    border-top: 1px solid $gray7;
-    border-left: 1px solid $gray7;
-    border-bottom: 1px solid $gray7;
     width: 100%;
-    font-size: 14px;
 
     /*** Table Header ***/
     th {
-        border-right: 1px solid $gray7;
         background: url(../../images/widgets/sortable-table-sort.png) no-repeat 10px 8px $blue3;
         padding: 5px 5px 5px 25px;
         color: #ffffff;
@@ -39,25 +34,6 @@ table.SortableTable {
 
     /*** Table Body ***/
     tbody {
-        tr {
-            border-top: 1px solid $gray7;
-            background-color: $white;
-
-            &.even{
-                background: $blue9;
-            }
-
-            &.hide {
-                display: none;
-            }
-
-            td {
-                border-right: 1px solid $gray7;
-                padding: 4px 4px 4px 10px;
-            }
-
-        }
-
         tr:hover {
             background-color: $blue8;
             cursor: pointer;
@@ -71,9 +47,7 @@ table.SortableTable {
             background-color: $blue3;
 
             td {
-                border-right: 1px solid $gray7;
                 text-align: left;
-                padding: 4px 4px 4px 25px;
                 font-weight: bold;
                 color: $white;
             }
@@ -83,15 +57,14 @@ table.SortableTable {
 
 .topToolbar {
     margin-bottom: 10px;
+}
 
-    input {
-        border: 1px solid $gray7;
-    }
+.columnSelector{
+    width: 150px;
+}
 
-     select {
-        border: 1px solid $gray7;
-        margin-right: 5px;
-    }
+.keywordSearchInput{
+    margin-left: 10px;
 }
 
 .bottomToolbar {
@@ -156,11 +129,12 @@ table.SortableTable {
         float: left;
     }
 
-    #pageSizeSelector {
+    #pageSizeSelectorDiv {
         float: right;
-
-        select {
-            margin-right: 5px;
-        }
     }
+}
+
+.pagingSelector{
+  width: 100px;
+  margin-right: 5px;
 }

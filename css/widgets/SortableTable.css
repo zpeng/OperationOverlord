@@ -5,16 +5,11 @@
   overflow: hidden; }
 
 table.SortableTable {
-  border-top: 1px solid #afafaf;
-  border-left: 1px solid #afafaf;
-  border-bottom: 1px solid #afafaf;
   width: 100%;
-  font-size: 14px;
   /*** Table Header ***/
   /*** Table Body ***/
   /*** Table Footer ***/ }
   table.SortableTable th {
-    border-right: 1px solid #afafaf;
     background: url(../../images/widgets/sortable-table-sort.png) no-repeat 10px 8px #0066cc;
     padding: 5px 5px 5px 25px;
     color: #ffffff;
@@ -27,35 +22,24 @@ table.SortableTable {
     table.SortableTable th.tableHeaderOver {
       cursor: pointer;
       color: white; }
-  table.SortableTable tbody tr {
-    border-top: 1px solid #afafaf;
-    background-color: white; }
-    table.SortableTable tbody tr.even {
-      background: #d7ecf4; }
-    table.SortableTable tbody tr.hide {
-      display: none; }
-    table.SortableTable tbody tr td {
-      border-right: 1px solid #afafaf;
-      padding: 4px 4px 4px 10px; }
   table.SortableTable tbody tr:hover {
     background-color: #85c6de;
     cursor: pointer; }
   table.SortableTable tfoot tr {
     background-color: #0066cc; }
     table.SortableTable tfoot tr td {
-      border-right: 1px solid #afafaf;
       text-align: left;
-      padding: 4px 4px 4px 25px;
       font-weight: bold;
       color: white; }
 
 .topToolbar {
   margin-bottom: 10px; }
-  .topToolbar input {
-    border: 1px solid #afafaf; }
-  .topToolbar select {
-    border: 1px solid #afafaf;
-    margin-right: 5px; }
+
+.columnSelector {
+  width: 150px; }
+
+.keywordSearchInput {
+  margin-left: 10px; }
 
 .bottomToolbar {
   margin-top: 10px;
@@ -98,7 +82,9 @@ table.SortableTable {
   .bottomToolbar #pageIndex {
     margin-left: 150px;
     float: left; }
-  .bottomToolbar #pageSizeSelector {
+  .bottomToolbar #pageSizeSelectorDiv {
     float: right; }
-    .bottomToolbar #pageSizeSelector select {
-      margin-right: 5px; }
+
+.pagingSelector {
+  width: 100px;
+  margin-right: 5px; }

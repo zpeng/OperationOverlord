@@ -53,7 +53,14 @@ var SortableTable = new Class({
 
         onClick:false,
         sortOn:0,
-        sortBy:'ASC'
+        sortBy:'ASC',
+
+        //style other widgets
+        topToolbarClass: 'topToolbar',
+        columnSelectClass: '',
+        keywordInputClass: '',
+        bottomToolbarClass: 'bottomToolbar',
+        pagingSelectorClass: ''
 
     },
 
@@ -179,10 +186,11 @@ var SortableTable = new Class({
     _createTopToolbar:function () {
         var thisRef = this;
         this.topToolbar = new Element('div', {
-            'class':'topToolbar'
+            'class': this.options.topToolbarClass
         });
         this.col_selector = new Element('select', {
-            id:'columns'
+            'id':'columns',
+            'class': this.options.columnSelectClass
         }).addEvent("change", function (E) {
             thisRef.clearFilter();
         });
@@ -198,6 +206,7 @@ var SortableTable = new Class({
         }
         this.searchInput = new Element('input', {
                 'id':'keyword',
+                'class': this.options.keywordInputClass,
                 'type':'text',
                 'value':'Search...'}
         ).addEvent("keyup",
@@ -221,7 +230,7 @@ var SortableTable = new Class({
 
     _createBottomToolbar:function () {
         this.bottomToolbar = new Element('div', {
-            'class':'bottomToolbar'
+            'class':this.options.bottomToolbarClass
         });
         var thisRef = this;
         var pageNav = new Element('div', {
@@ -279,9 +288,11 @@ var SortableTable = new Class({
         ]);
 
         var pageSizeSelector = new Element('div', {
-            'id':'pageSizeSelector'
+            'id':'pageSizeSelectorDiv'
         }).adopt([
-            new Element('select').addEvent("change",
+            new Element('select',{
+                'class': this.options.pagingSelectorClass
+            }).addEvent("change",
                 function (E) {
                     thisRef._changePagingSize(this.value);
                 }).adopt([

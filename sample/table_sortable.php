@@ -17,9 +17,13 @@ $loader->load($code_base, 'table_sortable');
         window.addEvent('domready', function () {
             var myTable = new SortableTable({
                     tableId:'myTable',
-                    tableClass:'SortableTable',
+                    tableClass:'SortableTable table table-bordered table-striped',
                     targetId:'table_container',
-                    overCls:'over'
+                    overCls:'over',
+
+                    columnSelectClass: 'columnSelector',
+                    keywordInputClass: 'keywordSearchInput',
+                    pagingSelectorClass: 'pagingSelector'
                 },
                 TABLE_JSON
             );

@@ -37,7 +37,7 @@ var TABLE_JSON = {
         ["14", "Steve Zhang", "05598334395", "22-01-1997", "34.44444"]
     ]
 
-    ,
-    "footer":["footer 1", "footer 2", "footer 3", "footer 4", "footer 5"]
+    //,
+    //"footer":["footer 1", "footer 2", "footer 3", "footer 4", "footer 5"]
 
 };
